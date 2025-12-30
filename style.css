@@ -6,11 +6,6 @@ html {
   color: white;
 }
 
-.newspaper-border {
-  border: 5px double #333;
-  padding: 15px;
-}
-
 .newspaper-font {
     font-family: 'Playfair Display', serif;
 }
