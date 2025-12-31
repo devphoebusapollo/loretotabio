@@ -7,104 +7,138 @@
   <title>Loreto Peralta Tabio - Home</title>
   <link rel="icon" href="images/formal.png" type="image/png">
   <link href='/style.css' rel='stylesheet'>
+  <link href='/animations.css' rel='stylesheet'>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 font-serif">
+<body class="bg-gray-100 text-gray-800 font-sans">
 
-  <main class="container mx-auto p-12 max-w-4xl bg-white shadow-md my-4">
-    
-    <header class="text-center pb-2 mb-4">
-      <h1 class="text-3xl md:text-5xl font-bold font-serif newspaper-font mb-2">Loreto Peralta Tabio</h1>
-      <p class="text-base text-gray-600 newspaper-font">Experienced Leader | Licensed Professional English Teacher</p>
-      <hr class="my-2 border-gray-400">
-    </header>
+  <!-- Hero Section -->
+  <header class="hero bg-gray-800 text-white text-center py-16">
+    <div class="container mx-auto">
+      <img src="images/formal.png" alt="Loreto Peralta Tabio" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+      <h1 class="text-4xl font-bold">Loreto Peralta Tabio</h1>
+      <p class="text-lg mt-2">Experienced Leader | Licensed Professional English Teacher</p>
+    </div>
+  </header>
 
-    <section id="about" class="mb-8">
-      <h2 class="text-3xl font-bold mb-2 text-center newspaper-font">About Me</h2>
-      <div class="overflow-hidden">
-        <img src="images/formal.png" alt="Loreto Peralta Tabio" class="float-left w-32 h-32 md:w-48 md:h-48 rounded-full mr-4 mb-2 object-cover">
-        <p class="text-sm md:text-base leading-relaxed text-justify newspaper-text">
-          I am a leader in the digital marketing industry with experience in production leadership, account management, project management, client success management, and sales management. I am currently the Head of the Production Department in a web design agency, where I focus on driving results by supporting and guiding people toward the right direction.
-          <br><br>
-          I am also a Licensed Professional English Teacher in the Philippines, with experience teaching at both the secondary and tertiary levels. This background has strengthened my ability to communicate clearly, mentor effectively, and connect with people from all walks of life.
-          <br><br>
-          Outside of work, I enjoy reading, writing, public speaking, music, programming, gaming, and traveling. I am particularly drawn to thoughtful conversations on philosophy, psychology, and theology, which continually inspire my personal and professional growth.
-        </p>
-      </div>
+  <main class="container mx-auto p-6">
+
+    <section id="about" class="my-8 fade-in-section">
+      <h2 class="text-2xl font-bold text-center mb-6">About Me</h2>
+      <p class="text-base leading-relaxed max-w-3xl mx-auto">
+        I am a leader in the digital marketing industry with experience in production leadership, account management, project management, client success management, and sales management. I am currently the Head of the Production Department in a web design agency, where I focus on driving results by guiding people. I am also a Licensed Professional English Teacher in the Philippines, with experience teaching at both the secondary and tertiary levels.
+        <br><br>
+        Outside of work, I always find time to be creative and have fun, but most of the time I enjoy reading, writing, having conversations, music, coding, gaming, and travelling.
+      </p>
     </section>
 
-    <hr class="my-8 border-gray-400">
+    <hr class="my-6 border-gray-300">
 
-    <section id="background" class="mb-8">
-      <h2 class="text-3xl font-bold text-center mb-4 newspaper-font">Background</h2>
-      <div class="flex flex-col md:flex-row justify-center items-center md:items-start">
-        <div class="w-full md:w-5/12 p-2">
-          <h3 class="text-2xl font-bold mb-2 text-center newspaper-font">Experience</h3>
-          <div class="mb-4 text-left newspaper-text">
-              <h4 class="text-lg md:text-xl font-bold newspaper-font">Rockstar Web Design Services</h4>
-              <p class="text-gray-600">2021 - Present</p>
-              <p><strong>Head of Production Department</strong><br>Currently the Head of Production Department with prior experience in Account Management, Project Management, Client Success Management, and Sales Management.</p>
+    <section id="experience" class="my-8 fade-in-section">
+      <h2 class="text-2xl font-bold text-center mb-6">Experience</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
+          <div class="md:pr-6">
+            <h4 class="text-lg font-bold">Rockstar Web Design Services</h4>
+            <p class="text-gray-600">2021 - Present</p>
+            <h5 class="text-base font-bold mt-2">Positions Handled</h5>
+            <ul class="list-disc list-inside text-gray-600">
+              <li>Head of Production</li>
+              <li>Account Manager</li>
+              <li>Project Manager</li>
+              <li>Client Success Manager</li>
+              <li>Sales Manager</li>
+            </ul>
           </div>
-          <div class="text-left newspaper-text">
-              <h4 class="text-lg md:text-xl font-bold newspaper-font">University of Perpetual Help System JONELTA - Isabela Campus</h4>
-              <p class="text-gray-600">2017 - 2018</p>
-              <p><strong>College Instructor</strong></p>
-          </div>
-        </div>
-        <hr class="w-full my-2 md:hidden">
-        <div class="hidden md:block w-px bg-gray-400 self-stretch mx-4"></div>
-        <div class="w-full md:w-5/12 p-2">
-          <h3 class="text-2xl font-bold mb-2 text-center newspaper-font">Education</h3>
-          <div class="text-left newspaper-text">
-              <h4 class="text-lg md:text-xl font-bold newspaper-font">Bachelor of Arts in Mass Communication</h4>
-              <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
-              <p class="text-gray-600">2013 - 2017</p>
-              <h5 class="text-base md:text-lg font-bold mt-1 newspaper-font">Awards</h5>
-              <ul class="list-disc list-inside text-gray-600">
-                  <li>Campus Journalism Award</li>
-                  <li>Leadership Excellence Award</li>
-                  <li>Community Extension Service Award</li>
-              </ul>
-              <h4 class="text-lg md:text-xl font-bold mt-4 newspaper-font">Certificate of Professional Teacher in Education</h4>
-              <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
-              <p class="text-gray-600">2017</p>
+          <div class="md:pl-6">
+            <h4 class="text-lg font-bold">University of Perpetual Help System JONELTA - Isabela Campus</h4>
+            <p class="text-gray-600">2017 - 2018</p>
+            <p><strong>College Instructor</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <hr class="my-8 border-gray-400">
+    <hr class="my-6 border-gray-300">
 
-    <footer class="text-center text-gray-600 pt-4 border-t-2 border-gray-800 newspaper-font">
-        <div class="flex justify-center space-x-4 mb-2">
-            <!-- LinkedIn Icon -->
+    <section id="education" class="my-8 fade-in-section">
+      <h2 class="text-2xl font-bold text-center mb-6">Education</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
+          <div class="md:pr-6">
+            <h4 class="text-lg font-bold">Bachelor of Arts in Mass Communication</h4>
+            <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
+            <p class="text-gray-600">2013 - 2017</p>
+            <h5 class="text-base font-bold mt-2">Awards</h5>
+            <ul class="list-disc list-inside text-gray-600">
+              <li>Campus Journalism Award</li>
+              <li>Leadership Excellence Award</li>
+              <li>Community Extension Service Award</li>
+            </ul>
+          </div>
+          <div class="md:pl-6">
+            <h4 class="text-lg font-bold">Certificate of Professional Teacher in Education</h4>
+            <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
+            <p class="text-gray-600">2017</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-6 border-gray-300">
+
+    <footer class="text-center text-gray-600 py-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+        <div class="flex justify-center space-x-6 mb-4">
             <a href="https://www.linkedin.com/in/loreto-tabio-081442387" target="_blank" class="text-gray-600 hover:text-gray-800">
                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
                 </svg>
             </a>
-        </div>
-        <div class="mb-2 flex flex-col md:flex-row md:justify-center md:space-x-4">
-            <div class="mb-1 md:mb-0">
-                <svg class="w-6 h-6 md:w-8 md:h-8 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+             <a href="mailto:tabioloreto@gmail.com" class="text-gray-600 hover:text-gray-800">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
                 </svg>
-                <a href="mailto:tabioloreto@gmail.com" class="text-gray-600 hover:text-gray-800">tabioloreto@gmail.com</a>
-            </div>
-            <div>
-                <svg class="w-6 h-6 md:w-8 md:h-8 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            </a>
+            <a href="tel:+639691577120" class="text-gray-600 hover:text-gray-800">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.75-.25 1.02l-2.2 2.2z"/>
                 </svg>
-                <a href="tel:+639691577120" class="text-gray-600 hover:text-gray-800">+639691577120</a>
-            </div>
+            </a>
         </div>
-      <p class="mt-2 text-xs md:text-sm">&copy; Loreto Peralta Tabio. All rights reserved.</p>
+        <div class="text-base">
+            <p><a href="mailto:tabioloreto@gmail.com" class="hover:underline">tabioloreto@gmail.com</a></p>
+            <p><a href="tel:+639691577120" class="hover:underline">+639691577120</a></p>
+        </div>
+      <p class="mt-6 text-xs">&copy; Loreto Peralta Tabio. All rights reserved.</p>
     </footer>
 
   </main>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    const revealSection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver(revealSection, {
+      root: null,
+      threshold: 0.15,
+    });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  </script>
 
 </body>
 </html>

@@ -2,15 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .hero {
+  background-color: #333;
   color: white;
-}
-
-.newspaper-font {
-    font-family: 'Playfair Display', serif;
-}
-
-.newspaper-text {
-    text-align: justify;
-    line-height: 1.6;
 }
