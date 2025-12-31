@@ -29,7 +29,7 @@
     <section id="about" class="my-8 fade-in-section">
       <h2 class="text-2xl font-bold text-center mb-6">About Me</h2>
       <p class="text-base leading-relaxed max-w-3xl mx-auto">
-        I am a leader in the digital marketing industry with experience in production leadership, account management, project management, client success management, and sales management. I am currently the Head of the Production Department in a web design agency, where I focus on driving results by guiding people. I am also a Licensed Professional English Teacher in the Philippines, with experience teaching at both the secondary and tertiary levels.
+        I am a leader in the digital marketing industry with experience in <strong>production leadership</strong>, <strong>account management</strong>, <strong>project management</strong>, <strong>client success management</strong>, and <strong>sales management</strong>. I am currently the <strong>Head of the Production Department</strong> in a web design agency, where I focus on driving results by guiding people. I am also a <strong>Licensed Professional English Teacher</strong> in the Philippines, with experience teaching at both the secondary and tertiary levels.
         <br><br>
         Outside of work, I always find time to be creative and have fun, but most of the time I enjoy reading, writing, having conversations, music, coding, gaming, and travelling.
       </p>
@@ -44,19 +44,12 @@
           <div class="md:pr-6">
             <h4 class="text-lg font-bold">Rockstar Web Design Services</h4>
             <p class="text-gray-600">2021 - Present</p>
-            <h5 class="text-base font-bold mt-2">Positions Handled</h5>
-            <ul class="list-disc list-inside text-gray-600">
-              <li>Head of Production</li>
-              <li>Account Manager</li>
-              <li>Project Manager</li>
-              <li>Client Success Manager</li>
-              <li>Sales Manager</li>
-            </ul>
+            <p class="text-gray-600 mt-2"><em>"I have handled several leadership and management roles, including Head of Production, Account Manager, Project Manager, Client Success Manager, and Sales Manager, where I led teams, managed projects, worked closely with clients, ensured successful delivery, and supported sales efforts."</em></p>
           </div>
           <div class="md:pl-6">
             <h4 class="text-lg font-bold">University of Perpetual Help System JONELTA - Isabela Campus</h4>
             <p class="text-gray-600">2017 - 2018</p>
-            <p><strong>College Instructor</strong></p>
+            <p class="text-gray-600 mt-2"><em>"As a college instructor, I have taught English and Communication Arts subjects that improved the English communication and research skills of students."</em></p>
           </div>
         </div>
       </div>
@@ -90,6 +83,34 @@
 
     <hr class="my-6 border-gray-300">
 
+    <section id="who-i-am" class="my-8 fade-in-section">
+      <h2 class="text-2xl font-bold text-center mb-6">Who I am</h2>
+      <div class="max-w-3xl mx-auto relative">
+        <div class="carousel-container overflow-hidden bg-transparent">
+          <div class="carousel flex transition-transform duration-500 ease-in-out">
+            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
+              <p class="text-base leading-relaxed mt-4 italic">"I'm a <strong>goal-oriented</strong> person. I set clear objectives and align all my actions to achieve them, tracking progress and eliminating anything that doesn't contribute to the goal."</p>
+            </div>
+            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
+              <p class="text-base leading-relaxed mt-4 italic">"I consider myself a <strong>practical</strong> person because I always seek the most effective ways to achieve my goals. I rely on approaches that work in my current situation rather than methods that are only good in theory."</p>
+            </div>
+            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
+              <p class="text-base leading-relaxed mt-4 italic">"I am also a <strong>fun-loving</strong> person. I make sure to enjoy the process because we achieve better outcomes when we’re having fun."</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-pagination absolute bottom-0 left-1/2 -translate-x-1/2 flex space-x-2"></div>
+        <button class="carousel-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-700 hover:text-gray-900 z-10">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button class="carousel-next absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-700 hover:text-gray-900 z-10">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <hr class="my-6 border-gray-300">
+
     <footer class="text-center text-gray-600 py-6">
         <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
         <div class="flex justify-center space-x-6 mb-4">
@@ -111,34 +132,14 @@
         </div>
         <div class="text-base">
             <p><a href="mailto:tabioloreto@gmail.com" class="hover:underline">tabioloreto@gmail.com</a></p>
-            <p><a href="tel:+639691577120" class="hover:underline">+639691577120</a></p>
+            <p><a href="tel:+639691577120" class="hover:underline">_639691577120</a></p>
         </div>
       <p class="mt-6 text-xs">&copy; Loreto Peralta Tabio. All rights reserved.</p>
     </footer>
 
   </main>
 
-  <script>
-    const sections = document.querySelectorAll('.fade-in-section');
-
-    const revealSection = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-
-    const sectionObserver = new IntersectionObserver(revealSection, {
-      root: null,
-      threshold: 0.15,
-    });
-
-    sections.forEach(section => {
-      sectionObserver.observe(section);
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
