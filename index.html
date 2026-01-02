@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loreto Peralta Tabio - Home</title>
   <link rel="icon" href="images/formal.png" type="image/png">
-  <link href='/style.css' rel='stylesheet'>
-  <link href='/animations.css' rel='stylesheet'>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
@@ -26,7 +25,7 @@
 
   <main class="container mx-auto p-6">
 
-    <section id="about" class="my-8 fade-in-section">
+    <section id="about" class="my-8">
       <h2 class="text-2xl font-bold text-center mb-6">About Me</h2>
       <p class="text-base leading-relaxed max-w-3xl mx-auto">
         I am a leader in the digital marketing industry with experience in <strong>production leadership</strong>, <strong>account management</strong>, <strong>project management</strong>, <strong>client success management</strong>, and <strong>sales management</strong>. I am currently the <strong>Head of the Production Department</strong> in a web design agency, where I focus on driving results by guiding people. I am also a <strong>Licensed Professional English Teacher</strong> in the Philippines, with experience teaching at both the secondary and tertiary levels.
@@ -37,7 +36,7 @@
 
     <hr class="my-6 border-gray-300">
 
-    <section id="experience" class="my-8 fade-in-section">
+    <section id="experience" class="my-8">
       <h2 class="text-2xl font-bold text-center mb-6">Experience</h2>
       <div class="max-w-3xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
@@ -57,7 +56,7 @@
 
     <hr class="my-6 border-gray-300">
 
-    <section id="education" class="my-8 fade-in-section">
+    <section id="education" class="my-8">
       <h2 class="text-2xl font-bold text-center mb-6">Education</h2>
       <div class="max-w-3xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
@@ -83,7 +82,7 @@
 
     <hr class="my-6 border-gray-300">
 
-    <section id="who-i-am" class="my-8 fade-in-section">
+    <section id="who-i-am" class="my-8">
       <h2 class="text-2xl font-bold text-center mb-6">Who I am</h2>
       <div class="max-w-3xl mx-auto relative">
         <div class="carousel-container overflow-hidden bg-transparent">
@@ -111,7 +110,7 @@
 
     <hr class="my-6 border-gray-300">
 
-    <footer class="text-center text-gray-600 py-6">
+    <footer id="contact" class="text-center text-gray-600 py-6">
         <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
         <div class="flex justify-center space-x-6 mb-4">
             <a href="https://www.linkedin.com/in/loreto-tabio-081442387" target="_blank" class="text-gray-600 hover:text-gray-800">
@@ -132,14 +131,96 @@
         </div>
         <div class="text-base">
             <p><a href="mailto:tabioloreto@gmail.com" class="hover:underline">tabioloreto@gmail.com</a></p>
-            <p><a href="tel:+639691577120" class="hover:underline">_639691577120</a></p>
+            <p><a href="tel:+639691577120" class_="hover:underline">+639691577120</a></p>
         </div>
       <p class="mt-6 text-xs">&copy; Loreto Peralta Tabio. All rights reserved.</p>
     </footer>
 
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Carousel
+      let currentIndex = 0;
+      const items = $('.carousel-item');
+      const itemCount = items.length;
+      let interval;
+
+      function showSlide(index) {
+        const width = $('.carousel-container').width();
+        $('.carousel').css('transform', `translateX(-${index * width}px)`);
+        currentIndex = index;
+        updatePagination();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+        showSlide(currentIndex);
+      }
+
+      function startCarousel() {
+        interval = setInterval(nextSlide, 5000);
+      }
+
+      function stopCarousel() {
+        clearInterval(interval);
+      }
+
+      $('.carousel-next').on('click', function() {
+        stopCarousel();
+        nextSlide();
+        startCarousel();
+      });
+
+      $('.carousel-prev').on('click', function() {
+        stopCarousel();
+        prevSlide();
+        startCarousel();
+      });
+
+      // Pagination
+      for (let i = 0; i < itemCount; i++) {
+        $('.carousel-pagination').append('<button class="carousel-pagination-dot"></button>');
+      }
+
+      function updatePagination() {
+        $('.carousel-pagination-dot').removeClass('active');
+        $('.carousel-pagination-dot').eq(currentIndex).addClass('active');
+      }
+
+      $('.carousel-pagination-dot').on('click', function() {
+        stopCarousel();
+        showSlide($(this).index());
+        startCarousel();
+      });
+
+      // Start carousel if visible
+      const carouselObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCarousel();
+          } else {
+            stopCarousel();
+          }
+        });
+      });
+
+      if ($('.carousel-container').length) {
+        carouselObserver.observe($('.carousel-container')[0]);
+      }
+
+      $(window).on('resize', function() {
+        showSlide(currentIndex);
+      });
+
+      updatePagination();
+    });
+  </script>
 
 </body>
 </html>
