@@ -9,218 +9,160 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+        color: #000000;
+        scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+        font-weight: 900;
+        letter-spacing: -0.05em;
+    }
+    .hero {
+        animation: 1s ease-out 0s 1 fadeIn;
+    }
+    .fade-in-up {
+        animation: 1s ease-out 0s 1 fadeInUp;
+    }
+    .fade-in {
+      animation: 1s ease-out 0.5s 1 fadeIn;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .scroll-animation {
+      opacity: 0;
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+      transform: translateY(20px);
+    }
+    .scroll-animation.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: currentColor;
+      border-radius: 50%;
+      margin: 0 0.75rem;
+      vertical-align: middle;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="antialiased">
 
-  <!-- Hero Section -->
-  <header class="hero bg-gray-800 text-white text-center py-16">
-    <div class="container mx-auto">
-      <img src="images/formal.png" alt="Loreto Peralta Tabio" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
-      <h1 class="text-4xl font-bold">Loreto Peralta Tabio</h1>
-      <p class="text-lg mt-2">Experienced Leader | Licensed Professional English Teacher</p>
+  <section class="hero text-center min-h-screen flex flex-col items-center justify-center relative bg-gray-100 overflow-hidden px-4">
+    <div class="flex-grow flex flex-col items-center justify-center relative z-10">
+        <h1 class="text-6xl md:text-9xl font-black uppercase fade-in-up">Loreto Peralta Tabio</h1>
+        <div class="text-xl md:text-3xl mt-4 fade-in flex flex-wrap justify-center items-center">
+          <span>Leader</span><span class="dot"></span><span>Account Manager</span><span class="dot"></span><span>Project Manager</span><span class="dot"></span><span>Licensed Teacher</span>
+        </div>
     </div>
-  </header>
+  </section>
 
-  <main class="container mx-auto p-6">
-
-    <section id="about" class="my-8">
-      <h2 class="text-2xl font-bold text-center mb-6">About Me</h2>
-      <p class="text-base leading-relaxed max-w-3xl mx-auto">
-        I am a leader in the digital marketing industry with experience in <strong>production leadership</strong>, <strong>account management</strong>, <strong>project management</strong>, <strong>client success management</strong>, and <strong>sales management</strong>. I am currently the <strong>Head of the Production Department</strong> in a web design agency, where I focus on driving results by guiding people. I am also a <strong>Licensed Professional English Teacher</strong> in the Philippines, with experience teaching at both the secondary and tertiary levels.
-        <br><br>
-        Outside of work, I always find time to be creative and have fun, but most of the time I enjoy reading, writing, having conversations, music, coding, gaming, and travelling.
-      </p>
-    </section>
-
-    <hr class="my-6 border-gray-300">
-
-    <section id="experience" class="my-8">
-      <h2 class="text-2xl font-bold text-center mb-6">Experience</h2>
-      <div class="max-w-3xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
-          <div class="md:pr-6">
-            <h4 class="text-lg font-bold">Rockstar Web Design Services</h4>
-            <p class="text-gray-600">2021 - Present</p>
-            <p class="text-gray-600 mt-2"><em>"I have handled several leadership and management roles, including Head of Production, Account Manager, Project Manager, Client Success Manager, and Sales Manager, where I led teams, managed projects, worked closely with clients, ensured successful delivery, and supported sales efforts."</em></p>
-          </div>
-          <div class="md:pl-6">
-            <h4 class="text-lg font-bold">University of Perpetual Help System JONELTA - Isabela Campus</h4>
-            <p class="text-gray-600">2017 - 2018</p>
-            <p class="text-gray-600 mt-2"><em>"As a college instructor, I have taught English and Communication Arts subjects that improved the English communication and research skills of students."</em></p>
-          </div>
-        </div>
+  <main>
+    <section id="about" class="min-h-screen flex flex-col items-center justify-center relative p-8 md:p-16 scroll-animation">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl font-black mb-8">About Me</h2>
+        <p class="text-2xl leading-snug">
+          I am an experienced Production Head within the Digital Marketing industry, driven by a passion for building and empowering high-performing teams that deliver exceptional results.
+          Prior to leading production operations, I gained valuable experience as an Account Manager and Project Manager, ensuring client satisfaction and retention while overseeing successful project execution and delivery.
+          Outside of work, I enjoy performing to music, reading, journaling, having deep conversations, and cooking. I also love exploring beautiful places—especially in nature.
+        </p>
       </div>
     </section>
 
-    <hr class="my-6 border-gray-300">
-
-    <section id="education" class="my-8">
-      <h2 class="text-2xl font-bold text-center mb-6">Education</h2>
-      <div class="max-w-3xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:divide-x md:divide-gray-300">
-          <div class="md:pr-6">
-            <h4 class="text-lg font-bold">Bachelor of Arts in Mass Communication</h4>
-            <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
-            <p class="text-gray-600">2013 - 2017</p>
-            <h5 class="text-base font-bold mt-2">Awards</h5>
-            <ul class="list-disc list-inside text-gray-600">
-              <li>Campus Journalism Award</li>
-              <li>Leadership Excellence Award</li>
-              <li>Community Extension Service Award</li>
-            </ul>
+    <section id="experience" class="min-h-screen flex flex-col items-center justify-center relative p-8 md:p-16 bg-gray-100 scroll-animation">
+      <div class="max-w-4xl mx-auto">
+          <h2 class="text-5xl font-black mb-8">Experience</h2>
+          <div class="mb-8">
+              <h3 class="text-3xl font-bold">Rockstar Web Design Services</h3>
+              <p class="text-2xl font-bold">Production Head, Account Manager, and Project Manager</p>
+              <p class="text-lg text-gray-500">2021 - Present</p>
+              <p class="mt-4 text-2xl">I have handled several leadership and management roles, including Head of Production, Account Manager, and Project Manager where I led teams, managed projects, worked closely with clients, and ensured successful delivery.</p>
           </div>
-          <div class="md:pl-6">
-            <h4 class="text-lg font-bold">Certificate of Professional Teacher in Education</h4>
-            <p class="text-gray-600">University of Perpetual Help System JONELTA - Isabela Campus</p>
-            <p class="text-gray-600">2017</p>
+          <div>
+              <h3 class="text-3xl font-bold">University of Perpetual Help System JONELTA</h3>
+              <p class="text-2xl font-bold">College Instructor</p>
+              <p class="text-lg text-gray-500">2017 - 2018</p>
+              <p class="mt-4 text-2xl">As a college instructor, I have taught English and Communication Arts subjects that improved the English communication and research skills of students.</p>
           </div>
         </div>
-      </div>
     </section>
 
-    <hr class="my-6 border-gray-300">
-
-    <section id="who-i-am" class="my-8">
-      <h2 class="text-2xl font-bold text-center mb-6">Who I am</h2>
-      <div class="max-w-3xl mx-auto relative">
-        <div class="carousel-container overflow-hidden bg-transparent">
-          <div class="carousel flex transition-transform duration-500 ease-in-out">
-            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
-              <p class="text-base leading-relaxed mt-4 italic">"I'm a <strong>goal-oriented</strong> person. I set clear objectives and align all my actions to achieve them, tracking progress and eliminating anything that doesn't contribute to the goal."</p>
-            </div>
-            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
-              <p class="text-base leading-relaxed mt-4 italic">"I consider myself a <strong>practical</strong> person because I always seek the most effective ways to achieve my goals. I rely on approaches that work in my current situation rather than methods that are only good in theory."</p>
-            </div>
-            <div class="carousel-item flex-shrink-0 w-full text-center p-8">
-              <p class="text-base leading-relaxed mt-4 italic">"I am also a <strong>fun-loving</strong> person. I make sure to enjoy the process because we achieve better outcomes when we’re having fun."</p>
+    <section id="education" class="min-h-screen flex flex-col items-center justify-center relative p-8 md:p-16 scroll-animation">
+      <div class="max-w-4xl mx-auto">
+          <h2 class="text-5xl font-black mb-8">Education</h2>
+          <div class="mb-8">
+            <h3 class="text-3xl font-bold">BA Mass Communication</h3>
+            <p class="text-2xl font-bold">University of Perpetual Help System JONELTA</p>
+            <p class="text-lg text-gray-500">2013 - 2017</p>
+            <div class="mt-4 text-2xl">
+              <h4 class="font-bold">Awards</h4>
+              <ul class="list-disc list-inside">
+                <li>Campus Journalism Award</li>
+                <li>Leadership Excellence Award</li>
+                <li>Community Extension Service Award</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="carousel-pagination absolute bottom-0 left-1/2 -translate-x-1/2 flex space-x-2"></div>
-        <button class="carousel-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-700 hover:text-gray-900 z-10">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <button class="carousel-next absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-700 hover:text-gray-900 z-10">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
+          <div>
+            <h3 class="text-3xl font-bold">Certificate in Professional Education</h3>
+            <p class="text-2xl font-bold">University of Perpetual Help System JONELTA</p>
+            <p class="text-lg text-gray-500">2017</p>
+          </div>
       </div>
     </section>
-
-    <hr class="my-6 border-gray-300">
-
-    <footer id="contact" class="text-center text-gray-600 py-6">
-        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-        <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://www.linkedin.com/in/loreto-tabio-081442387" target="_blank" class="text-gray-600 hover:text-gray-800">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
-                </svg>
-            </a>
-             <a href="mailto:tabioloreto@gmail.com" class="text-gray-600 hover:text-gray-800">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
-                </svg>
-            </a>
-            <a href="tel:+639691577120" class="text-gray-600 hover:text-gray-800">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.75-.25 1.02l-2.2 2.2z"/>
-                </svg>
-            </a>
+  </main>
+  
+  <footer id="contact" class="bg-black text-white p-8 md:p-16 scroll-animation">
+        <h2 class="text-5xl font-black mb-8">Contact Me</h2>
+        <div class="text-2xl">
+            <p class="mb-2"><a href="https://www.linkedin.com/in/loreto-tabio-081442387" target="_blank" class="hover:underline">LinkedIn</a></p>
+            <p class="mb-2"><a href="mailto:tabioloreto@gmail.com" class="hover:underline">tabioloreto@gmail.com</a></p>
+            <p><a href="tel:+639691577120" class="hover:underline">Dito</a></p>
         </div>
-        <div class="text-base">
-            <p><a href="mailto:tabioloreto@gmail.com" class="hover:underline">tabioloreto@gmail.com</a></p>
-            <p><a href="tel:+639691577120" class_="hover:underline">+639691577120</a></p>
-        </div>
-      <p class="mt-6 text-xs">&copy; Loreto Peralta Tabio. All rights reserved.</p>
+      <p class="mt-16 text-sm text-gray-400">&copy; Loreto Peralta Tabio. All rights reserved.</p>
     </footer>
 
-  </main>
+    <script>
+      const scrollElements = document.querySelectorAll(".scroll-animation");
 
-  <script>
-    $(document).ready(function() {
-      // Carousel
-      let currentIndex = 0;
-      const items = $('.carousel-item');
-      const itemCount = items.length;
-      let interval;
+      const elementInView = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return elementTop <= (window.innerHeight || document.documentElement.clientHeight);
+      };
 
-      function showSlide(index) {
-        const width = $('.carousel-container').width();
-        $('.carousel').css('transform', `translateX(-${index * width}px)`);
-        currentIndex = index;
-        updatePagination();
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % itemCount;
-        showSlide(currentIndex);
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-        showSlide(currentIndex);
-      }
-
-      function startCarousel() {
-        interval = setInterval(nextSlide, 5000);
-      }
-
-      function stopCarousel() {
-        clearInterval(interval);
-      }
-
-      $('.carousel-next').on('click', function() {
-        stopCarousel();
-        nextSlide();
-        startCarousel();
-      });
-
-      $('.carousel-prev').on('click', function() {
-        stopCarousel();
-        prevSlide();
-        startCarousel();
-      });
-
-      // Pagination
-      for (let i = 0; i < itemCount; i++) {
-        $('.carousel-pagination').append('<button class="carousel-pagination-dot"></button>');
-      }
-
-      function updatePagination() {
-        $('.carousel-pagination-dot').removeClass('active');
-        $('.carousel-pagination-dot').eq(currentIndex).addClass('active');
-      }
-
-      $('.carousel-pagination-dot').on('click', function() {
-        stopCarousel();
-        showSlide($(this).index());
-        startCarousel();
-      });
-
-      // Start carousel if visible
-      const carouselObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            startCarousel();
-          } else {
-            stopCarousel();
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el)) {
+            el.classList.add("is-visible");
           }
-        });
-      });
-
-      if ($('.carousel-container').length) {
-        carouselObserver.observe($('.carousel-container')[0]);
+        })
       }
 
-      $(window).on('resize', function() {
-        showSlide(currentIndex);
-      });
-
-      updatePagination();
-    });
-  </script>
+      window.addEventListener("scroll", handleScrollAnimation);
+      // Run on load
+      handleScrollAnimation();
+    </script>
 
 </body>
 </html>
